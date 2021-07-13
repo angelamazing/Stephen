@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<p id="p1">Hello World!</p>
+<input id="demo" type="button" value="Change background color" />
+<p id="p2">请填充</p>
+
+<script>
+window.onload=function(){
+
+    document.getElementById("p1").style.color="blue";
+    document.getElementById("demo").onclick=function(){document.body.style.backgroundColor='lavender';}
+    document.getElementById("p2").innerHTML=document.getElementById("p1").firstChild.nodeValue;
+
+    }
+   
+    
+
+</script>
+
+</body>
+</html>

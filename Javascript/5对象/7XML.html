@@ -1,0 +1,37 @@
+<!-- XML 指可扩展标记语言（eXtensible Markup Language）。
+XML 被设计用来传输和存储数据。
+<?xml version="1.0" encoding="UTF-8"?>
+定义 XML 的版本（1.0）和所使用的编码（UTF-8 : 万国码, 可显示各种语言）。
+<file type="gif">computer.gif</file>需要处理这个元素的软件来说却很重要
+
+<file type="gif">computer.gif</file> 文件类型与数据无关，但是对需要处理这个元素的软件来说却很重要
+XML 文档形成了一种树结构，它从"根部"开始，然后扩展到"枝叶"。 
+下面note是根元素，从根出发形成了类似树的结构 
+XML 元素指的是从（且包括）开始标签直到（且包括）结束标签的部分。
+所有的 XML 元素都必须有一个关闭标签
+XML 标签对大小写敏感 -->
+ 
+<script>
+  if (window.XMLHttpRequest) {// code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp = new XMLHttpRequest();
+  }
+  else {// code for IE6, IE5
+    xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+
+  xmlhttp.open("GET", "sample.xml", false);
+  xmlhttp.send();
+  xmlDoc = xmlhttp.responseXML;
+  console.log(xmlDoc);
+ 
+</script>
+
+<!-- 
+  XML:可扩展标记语言（eXtensible Markup Language） 设计用来传输和存储数据
+	①必须有根元素
+	②声明(可选部分)  <?xml version="1.0" encoding="utf-8"?>
+	③XML元素都必须有一个关闭标签,对大小写敏感
+	④必须正确嵌套
+	⑤属性值必须加引号,一个元素可以有多个属性, <元素名 属性名1="属性值1" 属性名2="属性值2">
+	⑥实体引用
+ -->

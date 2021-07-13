@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id='p-id'>这是test行</p>
+
+    <script>
+        // 获取<p id="p-id">...</p>
+        var p = document.getElementById('p-id');
+        // 设置文本为abc:
+        p.innerHTML = 'ABC'; // <p id="p-id">ABC</p>
+        // 设置HTML:
+        p.innerHTML = 'ABC <span style="color:red">RED</span> XYZ';
+        // <p>...</p>的内部结构已修改
+
+       
+
+    </script>
+
+
+
+
+</body>
+
+</html>

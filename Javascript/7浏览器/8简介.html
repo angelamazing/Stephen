@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>我的网页</title>
+    <!-- 
+        常用的 HTML DOM 方法：
+        getElementById(id) - 获取带有指定 id 的节点（元素）
+        appendChild(node) - 插入新的子节点（元素）
+        removeChild(node) - 删除子节点（元素）
+     -->
+    <!-- 
+        innerHTML - 节点（元素）的文本值
+        parentNode - 节点（元素）的父节点
+        childNodes - 节点（元素）的子节点,会生产一个数组.
+        attributes - 节点（元素）的属性节点
+      -->
+    <script>
+        window.onload = function () { //与文档加载完事件绑定
+            var btn = document.getElementById("btn"); //获取id为btn的对象
+            btn.onclick = function () { //button元素点击事件绑定
+                alert("你点了我");
+                btn.style.color = "blue";
+            };
+            var result = document.getElementById("demo").childNodes[0];
+            result.onclick = function () {
+                alert("恭喜你");
+                window.location.href = "http://www.baidu.com";
+            }
+            var para = document.createElement("p");
+            var node = document.createTextNode("you are my angel");
+            para.appendChild(node);
+            document.getElementsByTagName("body")[0].appendChild(para);//这里使用的[0],为什么?
+        }
+    </script>
+</head>
+
+<body>
+    <div> 
+        <button id="btn">我是一个按钮</button>
+        <p id="demo"><button>我是2</button></p>
+        <h1>我是一级标题</h1>
+    </div>
+
+
+
+
+</body>
+
+</html>
